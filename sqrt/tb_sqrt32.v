@@ -12,7 +12,7 @@ module main;
   initial begin
      clk = 0;
      reset = 1;
-
+    $display("start");
      if (! $value$plusargs("x=%d", x)) begin
         $display("ERROR: please specify +x=<value> to start.");
         $finish;
