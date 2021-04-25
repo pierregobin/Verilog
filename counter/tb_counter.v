@@ -17,7 +17,7 @@ initial begin
      #11 reset = 0;
      #29 reset = 1;
      #11 reset = 0;
-     #1000 $finish;
+     #1005 $finish;
   end
   counter c1 (value, clk, reset);
 endmodule // test
