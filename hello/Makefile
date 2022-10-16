@@ -7,4 +7,4 @@ $(OUT) : hello.v
 run : $(OUT)
 	vvp $<
 clean :
-	rm -rf (OUT)
+	rm -rf $(OUT)
