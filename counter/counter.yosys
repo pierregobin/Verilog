@@ -1,0 +1,10 @@
+read_verilog counter.v 
+hierarchy -check -top counter
+proc; fsm; opt; memory; opt; 
+techmap
+opt
+dfflibmap -liberty ../lib/vsclib013.lib
+abc -liberty ../lib/vsclib013.lib
+write_verilog counter_synth.v
+
+
