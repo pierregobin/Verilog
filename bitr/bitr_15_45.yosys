@@ -1,0 +1,14 @@
+read_verilog bitr_15_45.v 
+hierarchy -check -top bitr_15_45
+proc; fsm; opt; memory; opt; 
+techmap
+opt
+dfflibmap -liberty ../lib/vsclib013.lib
+abc -liberty ../lib/vsclib013.lib
+write_json bitr_15_45_synth.json
+write_verilog bitr_15_45_synth.v
+json -o toto -aig
+show bitr_15_45
+
+
+

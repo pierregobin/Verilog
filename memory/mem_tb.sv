@@ -13,11 +13,7 @@ module test;
 
 	initial begin
        $dumpfile("mem.vcd");
-       $dumpvars(0,a);
-       $dumpvars(0,w);
-       $dumpvars(0,clk);
-       $dumpvars(0,data_i);
-       $dumpvars(0,data_o);
+       $dumpvars;
 		#5 a=5;
 		data_i=4;
 		#15 a=6;

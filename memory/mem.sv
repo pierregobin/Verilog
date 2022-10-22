@@ -10,6 +10,7 @@ module memory #(
 	);
 
 	reg [DATA-1:0] mem [2**WIDTH];
+//	$dump(0,mem);
 
 	always_ff @(posedge clk) begin
 		if (w == 1) begin

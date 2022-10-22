@@ -1,0 +1,10 @@
+read_verilog bitr.v 
+hierarchy -check -top bitr
+proc; fsm; opt; memory; opt; 
+techmap
+opt
+dfflibmap -liberty ../lib/vsclib013.lib
+abc -liberty ../lib/vsclib013.lib
+write_verilog bitr_synth.v
+
+
