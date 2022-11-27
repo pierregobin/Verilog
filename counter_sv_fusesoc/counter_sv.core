@@ -1,0 +1,32 @@
+CAPI=2:
+name : moi:examples:counter:0.0
+description : un exemple
+
+filesets:
+  rtl:
+    files:
+      - counter.sv
+    file_type: systemVerilogSource
+
+  tb:
+    files:
+      - tb_counter.sv
+    file_type: systemVerilogSource
+
+targets:
+  default: &default
+    filesets:
+      - rtl
+    toplevel: counter
+
+  sim :
+    <<: *default
+    description: simulation
+    default_tool: icarus
+    filesets_append :
+      - tb
+    toplevel: test
+    tools:
+      icarus:
+        iverilog_options:
+          - -g2012

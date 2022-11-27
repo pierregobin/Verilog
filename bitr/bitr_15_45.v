@@ -84,8 +84,9 @@ always @(sel, in) begin
 			6 : out = 2;
 			7 : out = 5;
 			8 : out = 8;
+			default: out=0;
 		endcase
-	default : out = 0;
+		default : out = 0;
 	endcase
 end
 endmodule

@@ -1,0 +1,19 @@
+dependencies:
+  moi:examples:counter:0.0: []
+files:
+- core: moi:examples:counter:0.0
+  file_type: systemVerilogSource
+  name: ../src/moi_examples_counter_0.0/counter.sv
+- core: moi:examples:counter:0.0
+  file_type: systemVerilogSource
+  name: ../src/moi_examples_counter_0.0/tb_counter.sv
+hooks: {}
+name: moi_examples_counter_0.0
+parameters: {}
+tool_options:
+  icarus:
+    iverilog_options:
+    - -g2012
+toplevel: test
+version: 0.2.1
+vpi: []
